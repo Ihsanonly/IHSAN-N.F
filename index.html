@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tebak pria paling tampan di dunia</title>
+  <link rel="stylesheet" href="style-index.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Siapa pria paling tampan di dunia?</h1>
+    <input type="text" id="jawaban" placeholder="Tulis jawaban kamu di sini">
+    <button onclick="cekJawaban()">Jawab</button>
+    <button onclick="tampilkanClue()">Butuh Clue?</button>
+    <p id="clue" class="clue"></p>
+  </div>
+
+  <script>
+    function tampilkanClue() {
+      document.getElementById("clue").textContent = "Mungkin jawabannya adalah namamu sendiri 😏";
+    }
+
+    function cekJawaban() {
+      const input = document.getElementById("jawaban").value.trim().toLowerCase();
+      if (input === "asep saefulhak") {
+        window.location.href = "Mailbox.html";
+      } else {
+        alert("Coba lagi ya! Siapa tahu clue-nya membantu 😄");
+      }
+    }
+  </script>
+</body>
+</html>
